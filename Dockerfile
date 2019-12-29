@@ -69,7 +69,7 @@ RUN set -ex \
 
 RUN apt-get clean
 
-ADD scripts/crontab /etc/crontab
+ADD scripts/crontab /var/spool/cron/crontabs/root
 ADD scripts/supervisord.conf /etc/supervisord.conf
 ADD scripts/supervisord.conf /etc/supervisord.conf
 ADD scripts/default.conf /etc/nginx/conf.d/default.conf
