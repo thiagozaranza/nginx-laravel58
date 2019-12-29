@@ -69,6 +69,8 @@ RUN set -ex \
 
 RUN apt-get clean
 
+ADD scripts/schedule /etc/cron.d/schedule
+ADD scripts/supervisord.conf /etc/supervisord.conf
 ADD scripts/supervisord.conf /etc/supervisord.conf
 ADD scripts/default.conf /etc/nginx/conf.d/default.conf
 ADD scripts/php-fpm.conf /etc/php7/php-fpm.conf
